@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRF</title>
+    <style>
+        body{
+            background-color: rgb(141, 141, 141);
+        }
+    </style>
+</head>
+<body>
+    <h1>Alfandega</h1>
+    Natural de que país? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>
+        function verificar() {
+            var txtp = window.document.querySelector('input#pais')
+            //var res = window.document.querySelector('div#res')
+            var nat = (txtp.value)
+            if (nat == 'brasil') {
+                res.innerHTML = `<p>Sendo natural de ${nat}, você é <strong>Brasileiro.</strong></p>`
+            } else {
+                res.innerHTML = `<p>Sendo natural de ${nat}, você é <strong>Estrangeiro.</strong></p>`
+            }
+            res.innerHTML += `Seja muito bem vindo ao Brasil!`
+        }
+    </script>
+</body>
+</html>
